@@ -23,11 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/nurse',[nurseController::class,'index']);
-// Route::get('/nurse',[nurseController::class,'show']);
-Route::post('/nurse',[nurseController::class,'store']);
-Route::put('/nurse/{id}',[nurseController::class,'update']);
-Route::delete('/nurse/{id}',[nurseController::class,'delete']);
 //Doctor Route
 Route::resource('doctor',DoctorController::class);
 
